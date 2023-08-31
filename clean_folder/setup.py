@@ -8,6 +8,6 @@ setup(
     author='ShaTa',
     description='Clean folder from',
     entry_points={
-        'console_scripts':['clean-folder = clean_folder.clean:sort']
+        'console_scripts':['clean-folder = clean_folder.clean:main']
     }
 )

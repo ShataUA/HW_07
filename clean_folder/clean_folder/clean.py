@@ -80,6 +80,7 @@ def extensions_append(extension):  # update known extensions list
 
 
 def sort(folder):
+    folder_path = Path(folder)
     path = Path(folder)
     for item in path.iterdir():
         if item.is_dir():
@@ -143,7 +144,7 @@ def sanitize_folder(path, ignore_folders_list):
         continue
 
 
-if __name__ == '__main__':
+def main():
     folder = sys.argv[1]
     folder_path = Path(folder)
     sort(folder)
@@ -156,3 +157,9 @@ if __name__ == '__main__':
     print(f'unknown_extension_files:\n{unknown_extension_files_list}\n')
     print(f'known_extensions:\n{known_extensions_list}\n')
     print(f'unknown_extensions:\n{unknown_extensions_list}\n')
+
+
+if __name__ == '__main__':
+    folder = sys.argv[1]
+    folder_path = Path(folder)
+    main()
